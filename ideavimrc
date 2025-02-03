@@ -1,0 +1,96 @@
+" set leader key
+let mapleader = ' '
+
+" case-insensitive search
+set ignorecase
+
+" Redo
+noremap U <C-r>
+
+" move between split
+map <A-j> <C-w>h
+map <A-k> <C-w>j
+map <A-l> <C-w>k
+map <A-;> <C-w>l
+
+" split screen
+map <leader>wv <Action>(SplitVertically)
+map <leader>wh <Action>(SplitHorizontally)
+map <leader>ww <Action>(Unsplit)
+map <leader>wa <Action>(UnsplitAll)
+
+" find and replace
+map <S-f> <Action>(Find)
+map <S-r> <Action>(Replace)
+map <leader>ff <Action>(FindInPath)
+map <leader>fr <Action>(ReplaceInPath)
+
+" refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+
+" navigation
+map <leader>sc <Action>(GotoClass)
+map <leader>sf <Action>(GotoFile)
+map <leader>ss <Action>(GotoSymbol)
+map <leader>sa <Action>(GotoAction)
+
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gy <Action>(GotoTypeDeclaration)
+map <leader>gi <Action>(GotoImplementation)
+map <leader>gt <Action>(GotoTest)
+map <leader>gm <Action>(GotoSuperMethod)
+map <leader>gl <Action>(GotoLine)
+
+map <leader>ug <Action>(FindUsages)
+map <leader>uu <Action>(ShowUsages)
+map <leader>vs <Action>(ViewSource)
+
+map <leader>im <Action>(QuickImplementations)
+map <leader>td <Action>(QuickTypeDefinition)
+map <leader>ti <Action>(ExpressionTypeInfo)
+map <leader>sh <Action>(ShowHoverInfo)
+map <leader>oo <Action>(FileStructurePopup)
+
+" editing
+map <leader>aa <Action>(ShowIntentionActions)
+map <leader>sw <Action>(SurroundWith)
+map <S-k> <Action>(EditorDuplicateLines)
+
+" jumping
+map <leader>en <Action>(GotoNextError)
+map <leader>ep <Action>(GotoPreviousError)
+map <leader>lc <Action>(JumpToLastChange)
+map <leader>ll <Action>(RecentLocations)
+map <leader>nn <Action>(NextTab)
+map <leader>mm <Action>(PreviousTab)
+map <C-;> <Action>(RecentFiles)
+map <A-[> <Action>(MethodUp)
+map <A-]> <Action>(MethodDown)
+
+" code style
+map <leader><leader> <Action>(ReformatCode)
+map <leader>oi <Action>(OptimizeImports)
+map <leader>ra <Action>(RearrangeCode)
+
+" moving
+map <C-k> <Action>(MoveLineDown)
+map <C-l> <Action>(MoveLineUp)
+map <C-i> <Action>(MoveStatementDown)
+map <C-o> <Action>(MoveStatementUp)
+map <leader>ca <Action>(CopyAbsolutePath)
+map <leader>cn <Action>(CopyFileName)
+map <leader>cp <Action>(CopyContentRootpath)
+
+" open and saving ideavim configs
+noremap <leader>cc :edit ~/.ideavimrc<cr>
+noremap <leader>cs :source ~/.ideavimrc<cr>
+
+" saving and exit
+noremap <leader>qq :q<cr>
+noremap <leader>wq :wq<cr>
