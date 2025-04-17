@@ -13,6 +13,9 @@ map <A-k> <C-w>j
 map <A-l> <C-w>k
 map <A-;> <C-w>l
 
+nmap 0 $
+nmap 9 ^
+
 " split screen
 map <leader>wv <Action>(SplitVertically)
 map <leader>wh <Action>(SplitHorizontally)
@@ -95,7 +98,7 @@ map <leader>nf <Action>(NewFile)
 map <leader>nd <Action>(NewDir)
 map <leader>re <Action>(RenameFile)
 map <leader>of <Action>(OpenFile)
-map <leader>ri <Action>(RestartIde)
+map <leader>ri <Action>(RestartIde) 
 
 " open and saving ideavim configs
 noremap <leader>cc :edit ~/.ideavimrc<cr>
